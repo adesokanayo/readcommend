@@ -54,7 +54,7 @@ $ ./migrate.sh
 
 ## Connecting to database
 
-During development, you can connect to and experiment with the PostgreSQL by running this command:
+During development, you can connect to and experiment with the PostgreSQL database by running this command:
 
 ```bash
 $ ./psql.sh
@@ -64,7 +64,7 @@ To exit the PostgreSQL session, type `\q` and press `ENTER`.
 
 ## Accessing front-end app
 
-Point your browser to: http://localhost:8080
+Point your browser to http://localhost:8080
 
 Be patient, the first time it might take up to 1 or 2 minutes for parcel to build and serve the front-end app.
 
