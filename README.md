@@ -2,18 +2,17 @@
 
 Readcommend is a book recommendation web app for the true book aficionados and disavowed human-size bookworms. It allows to search for book recommendations with best ratings, based on different search criteria.
 
-The front-end single-page app has already been developed using Node/TypeScript/React (see `/app`) and a PostgreSQL database with sample data is also provided (see `/migrate.*`). Your mission - if you accept it - is to implement a back-end microservice that will fetch the data from the database and serve it to the front-end app.
-
 # Instructions
 
-- Fork this repo into your own GitHub account.
-- Write a back-end microservice in the language of your choice (with a preference for Go, if you know it) that listens on `http://localhost:5000`.
+The front-end single-page app has already been developed using Node/TypeScript/React (see `/app`) and a PostgreSQL database with sample data is also provided (see `/migrate.*`). Your mission - if you accept it - is to implement a back-end microservice that will fetch the data from the database and serve it to the front-end app.
+
+- In the `service` directory, write a back-end microservice in the language of your choice (with a preference for Go, if you know it) that listens on `http://localhost:5000`.
 - Write multiple REST endpoints, all under the `/api/v1` route, as specified in the `/open-api.yaml` swagger file.
 - The most important endpoint, `/books`, must return book search results in order of descending ratings (from 5.0 to 1.0 stars) and filtered according to zero, one or multiple user selected criteria: author(s), genre(s), min/max pages, start/end publication date (the "era"). A maximum number of results can also be specified.
 - Write some documentation (ie: at the end of this file) to explain how to deploy and run your service.
 - Keep your code simple, clean and well-organized.
-- Commit regularly, it is helpful for us to understand your process via your Git history.
-- Make your repo publicly available on GitHub and send us the link for review.
+- If you use Git during development (and we recommend you do!), please ensure your repo is configured as private to prevent future candidates from finding it.
+- When you are done, please zip your entire project (excluding the `.git` hidden folder if any) and send the archive to us for review.
 - Don't hesitate to come back to us with any questions along the way. We prefer that you ask questions, rather than assuming and misinterpreting requirements.
 - You have no time limit to complete this exercise, but the more time you take, the higher our expectations in terms of quality and completeness.
 - You will be evaluated mainly based on how well you respect the above instructions. However, we understand that you may have a life (some people do), so if you don't have the time to respect all instructions, simply do your best and focus on what you deem most important.
