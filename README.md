@@ -9,6 +9,7 @@ The front-end single-page app has already been developed using Node/TypeScript/R
 - In the `service` directory, write a back-end microservice in the language of your choice (with a preference for Go, if you know it) that listens on `http://localhost:5000`.
 - Write multiple REST endpoints, all under the `/api/v1` route, as specified in the `/open-api.yaml` swagger file.
 - The most important endpoint, `/books`, must return book search results in order of descending ratings (from 5.0 to 1.0 stars) and filtered according to zero, one or multiple user selected criteria: author(s), genre(s), min/max pages, start/end publication date (the "era"). A maximum number of results can also be specified.
+- It's OK to use libraries for http handling/routing and SQL (ie: query builders), but try to refrain from relying heavily on end-to-end frameworks (ie: Django) and ORMs that handle everything and leave little room to showcase your coding skills! ;)
 - Write some documentation (ie: at the end of this file) to explain how to deploy and run your service.
 - Keep your code simple, clean and well-organized.
 - If you use Git during development (and we recommend you do!), please ensure your repo is configured as private to prevent future candidates from finding it.
