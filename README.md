@@ -70,6 +70,36 @@ Be patient, the first time it might take up to 1 or 2 minutes for parcel to buil
 
 You should see the front-end app appear, with all components displaying error messages because the back-end service does not exist yet.
 
-# Deploying and running back-end microservice
+## Deploying and running back-end microservice
+To start the backend service , ensure the app is ready and database is running. You should see a message that database system is ready to accept connection from the logs when you start the front and database.
 
-WRITE YOUR DOCUMENTATION HERE
+ Then , you can start the backend in another terminal window. 
+ 
+Navigate to the readcommendapi folder.
+```bash 
+$ cd .. service/readcommendapi
+```
+ 
+ **Build**
+
+```bash 
+$ docker build . -t readcommendapi
+```
+
+ **Run**
+
+```bash 
+$ docker run -p 5000:5000 readcommendapi
+```
+
+Send "http://localhost:5000/api/vi/books"  on your browser and that should return all the books in the database.
+
+Your app is ready for use. You can now reload http://localhost:8080 and you can get your book recommendations.
+
+Thank you.
+
+ **Test**
+
+```bash 
+$ go test -v ./test/...
+```
