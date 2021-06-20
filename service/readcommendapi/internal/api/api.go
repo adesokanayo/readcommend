@@ -22,11 +22,11 @@ func Run(configPath string) {
 	setConfiguration(configPath)
 	conf := config.GetConfig()
 	web := router.Setup()
+	fmt.Println("==================> API Running on port " + conf.Server.Port)
 	err := web.Run(":" + conf.Server.Port)
-	if err != nil{
-		fmt.Println("==================> API Running on port " + conf.Server.Port)
-	} else {
-		
-	}
+	if err != nil {
+		fmt.Println("app failed to start...", err)
+	} 
+	
 
 }
